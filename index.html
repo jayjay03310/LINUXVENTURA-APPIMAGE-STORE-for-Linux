@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>LINUXVENTURA Shop Channel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app-container">
+    <div id="top-bar">
+        <div class="search-capsule">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="search-input" placeholder="Buscar na LinuxVentura...">
+        </div>
+    </div>
+
+    <div id="grid-container">
+        </div>
+
+    <div id="bottom-bar">
+        <div id="status-area">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+                <div id="progress-glare"></div> </div>
+            <div id="status-text">Pronto para iniciar</div>
+        </div>
+
+        <div class="categories" id="cat-list">
+            <button class="cat-btn active" onclick="filterApps('all')">Todos</button>
+            <button class="cat-btn" onclick="filterApps('Graphics')">Gráficos</button>
+            <button class="cat-btn" onclick="filterApps('Office')">Escritório</button>
+            <button class="cat-btn" onclick="filterApps('Games')">Jogos</button>
+            <button class="cat-btn" onclick="filterApps('System')">Sistema</button>
+            <button class="cat-btn" onclick="openLibrary()">Minha Pasta</button>
+            <button class="cat-btn" onclick="addSource()">+ Fontes</button>
+            <button class="cat-btn" onclick="ejectSources()">Ejetar Fontes</button>
+        </div>
+    </div>
+</div>
+
+<script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "linuxventura",
+  "version": "1.5.2",
+  "description": "Uma experiência visual inspirada no macOS para sistemas Linux.",
+  "main": "main.js",
+  "author": {
+    "name": "Artxiesta",
+    "email": "seuemail@exemplo.com"
+  },
+  "homepage": "https://github.com/artxiesta/linuxventura",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux appimage"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.artxiesta.linuxventura",
+    "productName": "Linux Ventura",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "build/icons",
+      "maintainer": "Artxiesta <seuemail@exemplo.com>"
+    }
+  }
+}
