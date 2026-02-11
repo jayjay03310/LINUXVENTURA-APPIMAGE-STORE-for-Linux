@@ -1,40 +1,32 @@
 {
-  "name": "wii-iso-downloader",
-  "version": "1.0.0",
-  "description": "Baixador automático de ISOs de Nintendo Wii",
+  "name": "linuxventura",
+  "version": "2.0.8",
+  "description": "Uma experiência visual inspirada no Nintendo WII para sistemas Linux.",
   "main": "main.js",
-  "author": "Artxiesta",
+  "author": {
+    "name": "Artxiesta",
+    "email": "ArtxiestaUNCENSURED@Zero.com"
+  },
+  "homepage": "https://github.com/artxiesta/linuxventura",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux AppImage"
-  },
-  "build": {
-    "appId": "com.wii.downloader",
-    "productName": "Wii Downloader Channel",
-    "linux": {
-      "target": [
-        "AppImage"
-      ],
-      "category": "Game",
-      "maintainer": "Artxiesta",
-      "description": "Baixe jogos de Wii direto do Archive.org"
-    },
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "**/*",
-      "!dist/*",
-      "!node_modules/.cache/*"
-    ]
-  },
-  "dependencies": {
-    "axios": "^1.6.0",
-    "cheerio": "1.0.0-rc.12"
+    "dist": "electron-builder --linux deb"
   },
   "devDependencies": {
     "electron": "^28.0.0",
-    "electron-builder": "^24.9.0"
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.artxiesta.linuxventura",
+    "productName": "Linux Ventura",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "build/icons",
+      "maintainer": "Artxiesta <seuemail@exemplo.com>"
+    }
   }
 }
