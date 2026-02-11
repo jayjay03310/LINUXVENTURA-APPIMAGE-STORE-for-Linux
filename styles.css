@@ -9,11 +9,30 @@ body {
     color: #555;
 }
 
+/* Banner no Cabeçalho */
+#banner-header {
+    width: 100%;
+    height: 120px; /* Altura do banner */
+    background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #bbb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+#app-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem cubra todo o espaço disponível */
+}
+
 /* Container Principal */
 #app-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 120px); /* Ajuste para levar em conta a altura do banner */
 }
 
 /* --- TOPO --- */
@@ -174,13 +193,13 @@ body {
 .app-card {
     background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 50%, #e0e0e0 100%);
     border-radius: 18px;
-    height: 140px;
+    height: 180px; /* Aumentei a altura para acomodar a imagem banner */
     border: 3px solid #ccc; /* Borda padrão */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Alinhamento ao topo */
     position: relative;
     transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
@@ -194,12 +213,22 @@ body {
     z-index: 10;
 }
 
+.app-banner-image {
+    width: 100%;
+    height: 100px; /* Altura específica para a imagem banner */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .app-thumb {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
-    margin-bottom: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Imagem cobre todo o espaço disponível */
     filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+    /* Garantir que GIFs e outras mídias sejam exibidos corretamente */
+    animation-play-state: running;
 }
 
 .app-title {
@@ -207,7 +236,9 @@ body {
     font-weight: bold;
     color: #444;
     text-align: center;
-    padding: 0 10px;
+    padding: 8px 10px 0;
+    margin-top: 5px;
+    flex-shrink: 0; /* Impede que o título encolha */
 }
 
 /* --- OVERLAY DE BOTÕES --- */
