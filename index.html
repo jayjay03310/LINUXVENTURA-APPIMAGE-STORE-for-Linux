@@ -2,47 +2,43 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>LINUXVENTURA Shop Channel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Wii ISO Downloader</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="banner-header">
-        <img id="app-banner" src="https://s12.gifyu.com/images/bvbPW.gif" alt="Banner Image">
-    </header>
+    <div class="top-bar">
+        <div class="date" id="current-date">00/00 (Sex)</div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar jogo..." spellcheck="false">
+        </div>
+        <div class="time" id="current-time">00:00</div>
+    </div>
 
-<div id="app-container">
-    <div id="top-bar">
-        <div class="search-capsule">
-            <i class="fa-solid fa-search"></i>
-            <input type="text" id="search-input" placeholder="Buscar na LinuxVentura...">
+    <div class="main-container">
+        <div id="game-grid" class="channel-grid">
+            <div class="loading-screen">
+                <div class="wii-spinner"></div>
+                <p>Conectando ao Archive.org...</p>
+            </div>
         </div>
     </div>
 
-    <div id="grid-container">
+    <div class="bottom-bar">
+        <div class="wii-btn-round">Wii</div>
+        <div class="center-status">
+            <div class="status-text" id="status-text">Pasta alvo: ~/Wii_isos</div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-bar"></div>
+            </div>
+            <div class="control-buttons">
+                <button class="control-btn" id="control-button">Reiniciar</button>
+                <button class="control-btn" id="restart-button" style="display:none;">Reiniciar</button>
+            </div>
         </div>
-
-    <div id="bottom-bar">
-        <div id="status-area">
-            <div id="progress-container">
-                <div id="progress-bar"></div>
-                <div id="progress-glare"></div> </div>
-            <div id="status-text">Pronto para iniciar</div>
-        </div>
-
-        <div class="categories" id="cat-list">
-            <button class="cat-btn active" onclick="filterApps('all')">Todos</button>
-            <button class="cat-btn" onclick="filterApps('Graphics')">Gráficos</button>
-            <button class="cat-btn" onclick="filterApps('Office')">Escritório</button>
-            <button class="cat-btn" onclick="filterApps('Games')">Jogos</button>
-            <button class="cat-btn" onclick="filterApps('System')">Sistema</button>
-            <button class="cat-btn" onclick="openLibrary()">Minha Pasta</button>
-            <button class="cat-btn" onclick="addSource()">+ Fontes</button>
-            <button class="cat-btn" onclick="ejectSources()">Ejetar Fontes</button>
-        </div>
+        <div class="wii-btn-oval">Start</div>
     </div>
-</div>
 
-<script src="renderer.js"></script>
+    <script src="renderer.js"></script>
 </body>
 </html>
