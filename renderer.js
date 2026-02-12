@@ -272,7 +272,14 @@ const defaultApps = [
         thumb: "https://cdn-icons-png.flaticon.com/512/3437/3437507.png",
         link: "hJtQtPp3sm:3/U/xg3iptHhJuWbr.zcxoSmQ/wiXvfa8nc-PhZcE/bBmoPtitVlzessg-yaupJpGirmAaRgBe6/wrxexlYeNaPsFemsl/xdfo8wDn3lfoAatda/j2J0K2w6i0S2W0U2i-M1v5O3k6d5q0R/MBwo6tIthlfe1sb_26E18.f1b-a1I-PaOr9c0hVipmHalgme25J.I00-4xj8e6B_n6n4z.6AWpXp5IXmCaZgoe6~121~",
         filename: "Bottles_61.1-1-archimage5.0-x86_64.AppImage"
-    }
+    },
+    {
+        name: "PC-Gamebox-OutdatedGames-Classics",
+        category: "Games",
+        thumb: "https://i.ibb.co/k2PsZZqH/pc-game.jpg",
+        link: "hZtvtYppsm:r/j/NgTiKtthFuCb7.Lcxo6md/vjna5yHjeavyE0r3y3C1B08/xLueigya1ctyeA4PTPNIUmKa8g6eWAJPVPOSv/Srge1lKekaqsfefsI/3dLotwtn7l6oJaXd2/J1h.H50/YGLaJmjeVBVoGx4.8GWeumJefoLsO-Q1v.I0B.H0n.HAGpLpVIVmjajgEeP~101~",
+        filename: "Gameboxv1.AppImage"
+    },
 ];
 
 let apps = [...defaultApps]; // Começa com os apps padrão
