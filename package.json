@@ -1,6 +1,6 @@
 {
   "name": "linuxventura",
-  "version": "2.0.8",
+  "version": "2.2.1",
   "description": "Uma experiência visual inspirada no Nintendo WII para sistemas Linux.",
   "main": "main.js",
   "author": {
